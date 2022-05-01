@@ -1,0 +1,103 @@
+f elements in a list: '))
+    in_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    print(f'The {k} Largest Element in {in_list} is {sorted(in_list, reverse=True)[0:k]}')
+
+nLargestEleInList(4)
+Enter the No of elements in a list: 10
+Enter a Element: 1
+Enter a Element: 2
+Enter a Element: 3
+Enter a Element: 4
+Enter a Element: 5
+Enter a Element: 6
+Enter a Element: 7
+Enter a Element: 8
+Enter a Element: 9
+Enter a Element: 10
+The 4 Largest Element in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] is [10, 9, 8, 7]
+7.Write a Python Program to find even numbers in the list ?
+def evenNoInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    even_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    for ele in in_list:
+        if ele%2 == 0:
+            even_list.append(ele)
+    print(f'The Even Elements in {in_list} are {even_list}')
+
+evenNoInList()
+Enter the No of elements in a list: 6
+Enter a Element: 1
+Enter a Element: 2
+Enter a Element: 3
+Enter a Element: 4
+Enter a Element: 5
+Enter a Element: 6
+The Even Elements in [1, 2, 3, 4, 5, 6] are [2, 4, 6]
+8.Write a Python Program to find odd numbers in the list ?
+def oddNoInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    odd_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    for ele in in_list:
+        if ele%2 != 0:
+            odd_list.append(ele)
+    print(f'The Even Elements in {in_list} are {odd_list}')
+
+oddNoInList()
+Enter the No of elements in a list: 6
+Enter a Element: 1
+Enter a Element: 2
+Enter a Element: 3
+Enter a Element: 4
+Enter a Element: 5
+Enter a Element: 6
+The Even Elements in [1, 2, 3, 4, 5, 6] are [1, 3, 5]
+9.Write a Python Program to remove empty list from list ?
+def checkEmptyList():
+    in_list = eval(input('Enter all elements of the list: '))
+    if [] in in_list:
+        print(f'There is an Empty list in {in_list} at Position {in_list.index([])}')
+        in_list.remove([])
+        print(f'The List after removing [] is {in_list}')
+    else:
+        print(f'There is no [] List in the list {in_list}')
+        
+checkEmptyList()
+Enter all elements of the list: [1,2,3,4,5,[],6,7,8,9,0]
+There is an Empty list in [1, 2, 3, 4, 5, [], 6, 7, 8, 9, 0] at Position 5
+The List after removing [] is [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+10.Write a Python Program to Cloning or Copying a list ?
+import copy
+
+def cloneList():
+    in_list = eval(input('Enter a list'))
+    print(in_list, id(in_list))
+    cloned_list = in_list.copy()
+    print(cloned_list, id(cloned_list))
+
+cloneList()
+Enter a list[1,2,3,4,5,6,7,8,9,0]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 1804715913280
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 1804715963072
+11.Write a Python Program to count occurences of an element in a list ?
+def checkOccurence():
+    in_list = eval(input('Enter the elements of the list: '))
+    in_num = eval(input('Enter the element to find: '))
+    count = 0
+    if in_num in in_list:
+        for ele in in_list:
+            if ele == in_num:
+                count = count+1
+    print(f'There are {count} occurences of {in_num} in {in_list}')
+    
+checkOccurence()
+Enter the elements of the list: [1,2,3,1,2,3,1,2,3,4,5,6,4,5,6]
+Enter the element to find: 6
+There are 2 occurences of 6 in [1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 5, 6, 4, 5, 6]
